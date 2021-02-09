@@ -22,7 +22,7 @@ const launchConfig = {
   await page.type(searchBar, 'Time', { delay: 100 })
   await page.tap(searchBtn)
   await page.waitForSelector(timeElement)
-  await page.screenshot({ path: `checkOutput/${new Date(Date.now())}.png` })
+  await page.screenshot({ path: `output/${new Date(Date.now())}.png` })
   await browser.close()
 })()
 
@@ -37,7 +37,7 @@ function setViewPort(page: puppeteer.Page) {
 
 /** Create output folder */
 function checkOutput() {
-  if (!fs.existsSync('/output')) {
+  if (!fs.existsSync('./output')) {
     fs.mkdirSync('output')
   }
 }
