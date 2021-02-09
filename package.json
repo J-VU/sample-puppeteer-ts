@@ -1,0 +1,20 @@
+{
+  "name": "sample-puppeteer-tsx",
+  "version": "0.0.1",
+  "repository": "",
+  "author": "joseph vu <me@josephvu.dev>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "start": "yarn build && node ./dist/index.js",
+    "format": "prettier --write 'src/**/*'"
+  },
+  "dependencies": {
+    "puppeteer": "^7.0.4"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^5.4.3",
+    "rimraf": "^3.0.2"
+  }
+}
